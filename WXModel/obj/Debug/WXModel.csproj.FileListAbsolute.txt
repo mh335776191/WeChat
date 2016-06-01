@@ -2,3 +2,8 @@ D:\gitui\learngit\RoutineTest\WeChat\WXModel\bin\Debug\WXModel.dll
 D:\gitui\learngit\RoutineTest\WeChat\WXModel\bin\Debug\WXModel.pdb
 D:\gitui\learngit\RoutineTest\WeChat\WXModel\obj\Debug\WXModel.dll
 D:\gitui\learngit\RoutineTest\WeChat\WXModel\obj\Debug\WXModel.pdb
+D:\gitui\learngit\WeChat\WXModel\bin\Debug\WXModel.dll
+D:\gitui\learngit\WeChat\WXModel\bin\Debug\WXModel.pdb
+D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.csprojResolveAssemblyReference.cache
+D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.dll
+D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.pdb

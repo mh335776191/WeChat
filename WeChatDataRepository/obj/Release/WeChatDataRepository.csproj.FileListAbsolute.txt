@@ -1,0 +1,12 @@
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WeChatDataRepository.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WeChatDataRepository.pdb
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\EntityFramework.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WeChatORM.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WeChatORM.pdb
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\EntityFramework.xml
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\obj\Release\WeChatDataRepository.csprojResolveAssemblyReference.cache
+D:\gitui\learngit\WeChat\WeChatDataRepository\obj\Release\WeChatDataRepository.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\obj\Release\WeChatDataRepository.pdb
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WXModel.dll
+D:\gitui\learngit\WeChat\WeChatDataRepository\bin\Release\WXModel.pdb

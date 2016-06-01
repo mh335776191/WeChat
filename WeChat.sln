@@ -9,6 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChat", "WeChat\WeChat.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{58740B07-24B0-4F47-A5A9-C852DF217524}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatORM", "WeChatORM\WeChatORM.csproj", "{D04632D9-0F1C-4C5B-B28D-3FB462D36BBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeChatData", "WeChatData", "{1E7B4B17-215F-4B2E-9133-133026E3FBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatDataRepository", "WeChatDataRepository\WeChatDataRepository.csproj", "{C38C5B96-112A-4644-A080-26ADA5094FC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatBusiness", "WeChatBusiness\WeChatBusiness.csproj", "{62B96389-A9C3-42D7-9142-CDD62338AD84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatQuery", "WeChatQuery\WeChatQuery.csproj", "{DA2D7621-8D14-40BC-AD99-581EA6B2E62A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +37,29 @@ Global
 		{58740B07-24B0-4F47-A5A9-C852DF217524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58740B07-24B0-4F47-A5A9-C852DF217524}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58740B07-24B0-4F47-A5A9-C852DF217524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04632D9-0F1C-4C5B-B28D-3FB462D36BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04632D9-0F1C-4C5B-B28D-3FB462D36BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04632D9-0F1C-4C5B-B28D-3FB462D36BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04632D9-0F1C-4C5B-B28D-3FB462D36BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C38C5B96-112A-4644-A080-26ADA5094FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C38C5B96-112A-4644-A080-26ADA5094FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C38C5B96-112A-4644-A080-26ADA5094FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C38C5B96-112A-4644-A080-26ADA5094FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B96389-A9C3-42D7-9142-CDD62338AD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B96389-A9C3-42D7-9142-CDD62338AD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B96389-A9C3-42D7-9142-CDD62338AD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B96389-A9C3-42D7-9142-CDD62338AD84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C38C5B96-112A-4644-A080-26ADA5094FC7} = {1E7B4B17-215F-4B2E-9133-133026E3FBC3}
+		{62B96389-A9C3-42D7-9142-CDD62338AD84} = {1E7B4B17-215F-4B2E-9133-133026E3FBC3}
+		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A} = {1E7B4B17-215F-4B2E-9133-133026E3FBC3}
 	EndGlobalSection
 EndGlobal

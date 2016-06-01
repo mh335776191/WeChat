@@ -144,10 +144,17 @@
       <Project>{58740b07-24b0-4f47-a5a9-c852df217524}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeChatBusiness\WeChatBusiness.csproj">
+      <Project>{62b96389-a9c3-42d7-9142-cdd62338ad84}</Project>
+      <Name>WeChatBusiness</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WXModel\WXModel.csproj">
       <Project>{96b2c8dc-0469-40f5-ac04-71857aa7ab86}</Project>
       <Name>WXModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\WeChat.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -12,5 +12,9 @@ namespace Common
         public static string WXEncodingAesKey = System.Configuration.ConfigurationManager.AppSettings["WXEncodingAesKey"];
         public static string WXAppId = System.Configuration.ConfigurationManager.AppSettings["WXAppId"];
         public static string WXAppSecret = System.Configuration.ConfigurationManager.AppSettings["WXAppSecret"];
+        /// <summary>
+        /// 微信accesstoken获取路径
+        /// </summary>
+        public static string WXtoken_cgibinurl = "https://api.weixin.qq.com/cgi-bin/token";
     }
 }

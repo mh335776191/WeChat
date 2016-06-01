@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WXEntityStoreContainer" CdmEntityContainer="WXDBEntity">
+    <EntitySetMapping Name="WX_Access_token">
+      <EntityTypeMapping TypeName="WXEntity.WX_Access_token">
+        <MappingFragment StoreEntitySet="WX_Access_token">
+          <ScalarProperty Name="access_token" ColumnName="access_token" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_RequestMsgLog">
+      <EntityTypeMapping TypeName="WXEntity.WX_RequestMsgLog">
+        <MappingFragment StoreEntitySet="WX_RequestMsgLog">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_RequestParserFail">
+      <EntityTypeMapping TypeName="WXEntity.WX_RequestParserFail">
+        <MappingFragment StoreEntitySet="WX_RequestParserFail">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_ResponseMsgLog">
+      <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
+        <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Global_Error">
+      <EntityTypeMapping TypeName="WXEntity.Global_Error">
+        <MappingFragment StoreEntitySet="Global_Error">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

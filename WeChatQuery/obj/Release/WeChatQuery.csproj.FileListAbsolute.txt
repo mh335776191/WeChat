@@ -1,0 +1,9 @@
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\WeChatQuery.dll
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\WeChatQuery.pdb
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\Common.dll
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\WXModel.dll
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\Common.pdb
+D:\gitui\learngit\WeChat\WeChatQuery\bin\Release\WXModel.pdb
+D:\gitui\learngit\WeChat\WeChatQuery\obj\Release\WeChatQuery.csprojResolveAssemblyReference.cache
+D:\gitui\learngit\WeChat\WeChatQuery\obj\Release\WeChatQuery.dll
+D:\gitui\learngit\WeChat\WeChatQuery\obj\Release\WeChatQuery.pdb

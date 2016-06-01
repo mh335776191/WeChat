@@ -1,0 +1,5 @@
+D:\gitui\learngit\WeChat\Common\bin\Release\Common.dll
+D:\gitui\learngit\WeChat\Common\bin\Release\Common.pdb
+D:\gitui\learngit\WeChat\Common\obj\Release\Common.dll
+D:\gitui\learngit\WeChat\Common\obj\Release\Common.pdb
+D:\gitui\learngit\WeChat\Common\obj\Release\Common.csprojResolveAssemblyReference.cache

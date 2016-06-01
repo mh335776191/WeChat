@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WXEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Global_Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="text" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“qds11839994_db.dbo.WX_Access_token”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="WX_Access_token">
+    <Key>
+      <PropertyRef Name="access_token" />
+      <PropertyRef Name="updatedate" />
+    </Key>
+    <Property Name="access_token" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="updatedate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WX_RequestMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToUserName" Type="varchar" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" MaxLength="100" />
+    <Property Name="MsgId" Type="varchar" MaxLength="100" />
+    <Property Name="RequestJson" Type="varchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WX_RequestParserFail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestXML" Type="varchar(max)" />
+    <Property Name="RequestJson" Type="varchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WX_ResponseMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+    <Property Name="ToUserName" Type="varchar" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" MaxLength="100" />
+    <Property Name="MsgId" Type="varchar" MaxLength="100" />
+    <Property Name="RequestJson" Type="varchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="WXEntityStoreContainer">
+    <EntitySet Name="Global_Error" EntityType="Self.Global_Error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WX_RequestMsgLog" EntityType="Self.WX_RequestMsgLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WX_RequestParserFail" EntityType="Self.WX_RequestParserFail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WX_ResponseMsgLog" EntityType="Self.WX_ResponseMsgLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WX_Access_token" EntityType="Self.WX_Access_token" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[WX_Access_token].[access_token] AS [access_token], 
+[WX_Access_token].[updatedate] AS [updatedate]
+FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

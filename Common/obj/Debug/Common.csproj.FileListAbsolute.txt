@@ -2,3 +2,8 @@ D:\gitui\learngit\RoutineTest\WeChat\Common\bin\Debug\Common.dll
 D:\gitui\learngit\RoutineTest\WeChat\Common\bin\Debug\Common.pdb
 D:\gitui\learngit\RoutineTest\WeChat\Common\obj\Debug\Common.dll
 D:\gitui\learngit\RoutineTest\WeChat\Common\obj\Debug\Common.pdb
+D:\gitui\learngit\WeChat\Common\bin\Debug\Common.dll
+D:\gitui\learngit\WeChat\Common\bin\Debug\Common.pdb
+D:\gitui\learngit\WeChat\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\gitui\learngit\WeChat\Common\obj\Debug\Common.dll
+D:\gitui\learngit\WeChat\Common\obj\Debug\Common.pdb

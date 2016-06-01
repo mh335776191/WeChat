@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WXEntity" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="WX_Access_token">
+    <Key>
+      <PropertyRef Name="access_token" />
+      <PropertyRef Name="updatedate" />
+    </Key>
+    <Property Name="access_token" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="updatedate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="WXDBEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="WX_Access_token" EntityType="Self.WX_Access_token" />
+    <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.WX_RequestMsgLog" />
+    <EntitySet Name="WX_RequestParserFail" EntityType="WXEntity.WX_RequestParserFail" />
+    <EntitySet Name="WX_ResponseMsgLog" EntityType="WXEntity.WX_ResponseMsgLog" />
+    <EntitySet Name="Global_Error" EntityType="WXEntity.Global_Error" />
+  </EntityContainer>
+  <EntityType Name="WX_RequestMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ToUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FromUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MsgType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MsgId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WX_RequestParserFail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WX_ResponseMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="Int32" Nullable="false" />
+    <Property Name="ToUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FromUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MsgType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MsgId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Global_Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

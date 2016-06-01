@@ -41,6 +41,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WXRequestModel.cs" />
+    <Compile Include="WXResultModel\WXAccessTokenResult.cs" />
+    <Compile Include="WXTransmitData\BaseData.cs" />
+    <Compile Include="WXTransmitData\TextMsg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

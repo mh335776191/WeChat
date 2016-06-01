@@ -1,0 +1,5 @@
+D:\gitui\learngit\WeChat\WXModel\bin\Release\WXModel.dll
+D:\gitui\learngit\WeChat\WXModel\bin\Release\WXModel.pdb
+D:\gitui\learngit\WeChat\WXModel\obj\Release\WXModel.dll
+D:\gitui\learngit\WeChat\WXModel\obj\Release\WXModel.pdb
+D:\gitui\learngit\WeChat\WXModel\obj\Release\WXModel.csprojResolveAssemblyReference.cache
