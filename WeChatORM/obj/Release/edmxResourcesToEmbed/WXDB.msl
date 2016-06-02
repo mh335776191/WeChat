@@ -9,16 +9,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="WX_RequestMsgLog">
-      <EntityTypeMapping TypeName="WXEntity.WX_RequestMsgLog">
-        <MappingFragment StoreEntitySet="WX_RequestMsgLog">
+    <EntitySetMapping Name="Global_Error">
+      <EntityTypeMapping TypeName="WXEntity.Global_Error">
+        <MappingFragment StoreEntitySet="Global_Error">
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -33,9 +28,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="WX_ResponseMsgLog">
-      <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
-        <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
+    <EntitySetMapping Name="WX_RequestMsgLog">
+      <EntityTypeMapping TypeName="WXEntity.WX_RequestMsgLog">
+        <MappingFragment StoreEntitySet="WX_RequestMsgLog">
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
           <ScalarProperty Name="MsgId" ColumnName="MsgId" />
@@ -43,16 +38,20 @@
           <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
           <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
           <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Global_Error">
-      <EntityTypeMapping TypeName="WXEntity.Global_Error">
-        <MappingFragment StoreEntitySet="Global_Error">
+    <EntitySetMapping Name="WX_ResponseMsgLog">
+      <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
+        <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

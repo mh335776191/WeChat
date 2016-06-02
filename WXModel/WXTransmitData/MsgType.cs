@@ -5,14 +5,6 @@ using System.Text;
 
 namespace WXModel.WXTransmitData
 {
-    public class BaseData
-    {
-        public string ToUserName { get; set; }
-        public string FromUserName { get; set; }
-        public string CreateTime { get; set; }
-        public string MsgType { get; set; }
-        public string MsgId { get; set; }
-    }
     public enum MsgType
     {
         /// <summary>

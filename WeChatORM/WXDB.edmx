@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Content" Type="text" />
-          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
         </EntityType>
         <!--生成过程中发现错误:
 警告 6002: 表/视图“qds11839994_db.dbo.WX_Access_token”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
@@ -34,7 +34,7 @@
           <Property Name="MsgType" Type="varchar" MaxLength="100" />
           <Property Name="MsgId" Type="varchar" MaxLength="100" />
           <Property Name="RequestJson" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="WX_RequestParserFail">
           <Key>
@@ -43,7 +43,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RequestXML" Type="varchar(max)" />
           <Property Name="RequestJson" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="WX_ResponseMsgLog">
           <Key>
@@ -55,9 +55,8 @@
           <Property Name="FromUserName" Type="varchar" MaxLength="100" />
           <Property Name="CreateTime" Type="varchar" MaxLength="100" />
           <Property Name="MsgType" Type="varchar" MaxLength="100" />
-          <Property Name="MsgId" Type="varchar" MaxLength="100" />
-          <Property Name="RequestJson" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ResponseXML" Type="varchar(max)" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="WXEntityStoreContainer">
           <EntitySet Name="Global_Error" EntityType="Self.Global_Error" Schema="dbo" store:Type="Tables" />
@@ -85,11 +84,28 @@ FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
         </EntityType>
         <EntityContainer Name="WXDBEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WX_Access_token" EntityType="Self.WX_Access_token" />
-          <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.WX_RequestMsgLog" />
-          <EntitySet Name="WX_RequestParserFail" EntityType="WXEntity.WX_RequestParserFail" />
-          <EntitySet Name="WX_ResponseMsgLog" EntityType="WXEntity.WX_ResponseMsgLog" />
           <EntitySet Name="Global_Error" EntityType="WXEntity.Global_Error" />
+          <EntitySet Name="WX_RequestParserFail" EntityType="WXEntity.WX_RequestParserFail" />
+          <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.WX_RequestMsgLog" />
+          <EntitySet Name="WX_ResponseMsgLog" EntityType="WXEntity.WX_ResponseMsgLog" />
           </EntityContainer>
+        <EntityType Name="Global_Error">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="WX_RequestParserFail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RequestXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
         <EntityType Name="WX_RequestMsgLog">
           <Key>
             <PropertyRef Name="Id" />
@@ -101,16 +117,7 @@ FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
           <Property Name="MsgType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MsgId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="WX_RequestParserFail">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RequestXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="WX_ResponseMsgLog">
           <Key>
@@ -122,17 +129,8 @@ FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
           <Property Name="FromUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CreateTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MsgType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="MsgId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="RequestJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="Global_Error">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ResponseXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -145,6 +143,25 @@ FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
               <MappingFragment StoreEntitySet="WX_Access_token">
                 <ScalarProperty Name="access_token" ColumnName="access_token" />
                 <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Global_Error">
+            <EntityTypeMapping TypeName="WXEntity.Global_Error">
+              <MappingFragment StoreEntitySet="Global_Error">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WX_RequestParserFail">
+            <EntityTypeMapping TypeName="WXEntity.WX_RequestParserFail">
+              <MappingFragment StoreEntitySet="WX_RequestParserFail">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+                <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -162,36 +179,16 @@ FROM [dbo].[WX_Access_token] AS [WX_Access_token]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="WX_RequestParserFail">
-            <EntityTypeMapping TypeName="WXEntity.WX_RequestParserFail">
-              <MappingFragment StoreEntitySet="WX_RequestParserFail">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-                <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="WX_ResponseMsgLog">
             <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
               <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+                <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
                 <ScalarProperty Name="MsgType" ColumnName="MsgType" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
                 <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
                 <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
                 <ScalarProperty Name="RequestId" ColumnName="RequestId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Global_Error">
-            <EntityTypeMapping TypeName="WXEntity.Global_Error">
-              <MappingFragment StoreEntitySet="Global_Error">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

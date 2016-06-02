@@ -10,6 +10,7 @@ using Common;
 using WeChatBusiness;
 using WXModel;
 using WXModel.WXTransmitData;
+using WXModel.WXTransmitData.RequestData;
 
 namespace WeChat.Controllers
 {
@@ -18,13 +19,13 @@ namespace WeChat.Controllers
 
         public ActionResult Action()
         {
-            //            string xml = @"<xml>
-            //<ToUserName><![CDATA[SuperRookier]]></ToUserName>
-            //<FromUserName><![CDATA[evalibusiness]]></FromUserName>
-            //<CreateTime>12345678</CreateTime>
-            //<MsgType><![CDATA[text]]></MsgType>
-            //<Content><![CDATA[你好，这是一条测试回复信息]]></Content>
-            //</xml>";
+            string xml = @"<xml>
+            <ToUserName><![CDATA[SuperRookier]]></ToUserName>
+            <FromUserName><![CDATA[evalibusiness]]></FromUserName>
+            <CreateTime>12345678</CreateTime>
+            <MsgType><![CDATA[text]]></MsgType>
+            <Content><![CDATA[你好，这是一条测试回复信息]]></Content>
+            </xml>";
 
             try
             {
@@ -34,14 +35,20 @@ namespace WeChat.Controllers
                 byte[] requestBytes = new byte[requestlength];
                 requestStream.Read(requestBytes, 0, (int)requestlength);
                 string requestStr = Encoding.UTF8.GetString(requestBytes);
+                //string requestStr = xml;
                 #endregion
-                string requestJson = MsgXMLHelper.ToXMLJson(requestStr);
-
-                BaseData requestData = WXQueryFactory.GetRequestModel(requestJson);
+                string requestJson = requestStr.ToXMLJson();
+                MsgType curmsgType = WXQueryFactory.GetMsgType(requestJson);
+                BaseRequestData requestData = WXQueryFactory.GetRequestModel(requestJson, curmsgType);
                 WX_RequestBusiness _requestBusiness = new WX_RequestBusiness();
                 if (requestData != null)
                 {
-                    _requestBusiness.AddRequestMsgLog(requestData, requestJson);
+                    int requestid = _requestBusiness.AddRequestMsgLog(requestData, requestJson);
+                    WXForResponse responsecmd = new WXForResponse(requestData, curmsgType);
+                    var responsemodel = responsecmd.GetResponseModel();
+                    var resuponsexml = responsecmd.GetResponseXML(responsemodel);
+                    _requestBusiness.AddResponseMsgLog(responsemodel, requestid, resuponsexml);
+                    return Content(resuponsexml, "text/xml");
                 }
                 else
                 {

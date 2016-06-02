@@ -26,9 +26,9 @@ namespace WeChatORM
         }
     
         public DbSet<WX_Access_token> WX_Access_token { get; set; }
-        public DbSet<WX_RequestMsgLog> WX_RequestMsgLog { get; set; }
-        public DbSet<WX_RequestParserFail> WX_RequestParserFail { get; set; }
-        public DbSet<WX_ResponseMsgLog> WX_ResponseMsgLog { get; set; }
         public DbSet<Global_Error> Global_Error { get; set; }
+        public DbSet<WX_RequestParserFail> WX_RequestParserFail { get; set; }
+        public DbSet<WX_RequestMsgLog> WX_RequestMsgLog { get; set; }
+        public DbSet<WX_ResponseMsgLog> WX_ResponseMsgLog { get; set; }
     }
 }

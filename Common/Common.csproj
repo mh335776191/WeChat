@@ -48,6 +48,12 @@
     <Compile Include="WXCommon.cs" />
     <Compile Include="MsgXMLHelper.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WXModel\WXModel.csproj">
+      <Project>{96b2c8dc-0469-40f5-ac04-71857aa7ab86}</Project>
+      <Name>WXModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using WeChatDataRepository;
 using WXModel.WXTransmitData;
+using WXModel.WXTransmitData.RequestData;
+using WXModel.WXTransmitData.ResponseData;
 
 namespace WeChatBusiness
 {
@@ -26,7 +28,7 @@ namespace WeChatBusiness
         /// <param name="data">信息实体</param>
         /// <param name="json">信息json串</param>
         /// <returns></returns>
-        public int AddRequestMsgLog(BaseData data, string json)
+        public int AddRequestMsgLog(BaseRequestData data, string json)
         {
             return _repository.AddRequestMsgLog(data, json);
         }
@@ -37,9 +39,10 @@ namespace WeChatBusiness
         /// <param name="requestid">回复的请求id</param>
         /// <param name="json">回复json串</param>
         /// <returns></returns>
-        public int AddResponseMsgLog(BaseData data, int requestid, string json)
+        public int AddResponseMsgLog(BaseResponseData data, int requestid, string responsexml)
         {
-            return _repository.AddResponseMsgLog(data, requestid, json);
+            return _repository.AddResponseMsgLog(data, requestid, responsexml);
         }
+       
     }
 }

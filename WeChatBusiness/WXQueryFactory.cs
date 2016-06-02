@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WXModel.WXTransmitData;
+using WXModel.WXTransmitData.RequestData;
 
 namespace WeChatBusiness
 {
     public class WXQueryFactory
     {
-        public static BaseData GetRequestModel(string json)
+        /// <summary>
+        /// 把请求转化为实体
+        /// </summary>
+        /// <param name="json">请求的json串</param>
+        /// <param name="msgtype">请求的消息类型</param>
+        /// <returns></returns>
+        public static BaseRequestData GetRequestModel(string json, MsgType msgtype)
         {
             MsgType msgType = GetMsgType(json);
             switch (msgType)
             {
                 case MsgType.text:
-                    return json.ToModel<TextMsg>();
+                    return json.ToModel<TextRequestMsg>();
             }
             return null;
         }
-        private static MsgType GetMsgType(string json)
+     
+        public static MsgType GetMsgType(string json)
         {
-            var baserequest = json.ToModel<BaseData>();
+            var baserequest = json.ToModel<BaseRequestData>();
             if (baserequest != null)
             {
                 switch (baserequest.MsgType)

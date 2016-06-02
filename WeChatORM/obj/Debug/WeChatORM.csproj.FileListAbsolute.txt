@@ -4,6 +4,6 @@ D:\gitui\learngit\WeChat\WeChatORM\bin\Debug\WeChatORM.pdb
 D:\gitui\learngit\WeChat\WeChatORM\bin\Debug\EntityFramework.dll
 D:\gitui\learngit\WeChat\WeChatORM\bin\Debug\EntityFramework.xml
 D:\gitui\learngit\WeChat\WeChatORM\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojResolveAssemblyReference.cache
 D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
 D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb
+D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojResolveAssemblyReference.cache

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using WeChatORM;
 using WXModel.WXTransmitData;
+using WXModel.WXTransmitData.RequestData;
+using WXModel.WXTransmitData.ResponseData;
 
 namespace WeChatDataRepository
 {
@@ -19,7 +21,7 @@ namespace WeChatDataRepository
         {
             using (var wxdb = new WXDBEntity())
             {
-                wxdb.WX_RequestParserFail.Add(new WX_RequestParserFail { RequestXML = requeststr, RequestJson = failjson });
+                wxdb.WX_RequestParserFail.Add(new WX_RequestParserFail { RequestXML = requeststr, RequestJson = failjson, CreateDate = DateTime.Now });
                 return wxdb.SaveChanges();
             }
         }
@@ -29,7 +31,7 @@ namespace WeChatDataRepository
         /// <param name="data">信息实体</param>
         /// <param name="json">信息json串</param>
         /// <returns></returns>
-        public int AddRequestMsgLog(BaseData data, string json)
+        public int AddRequestMsgLog(BaseRequestData data, string json)
         {
             using (var wxdb = new WXDBEntity())
             {
@@ -40,6 +42,7 @@ namespace WeChatDataRepository
                 log.MsgType = data.MsgType;
                 log.MsgId = data.MsgId;
                 log.RequestJson = json;
+                log.CreateDate = DateTime.Now;
                 wxdb.WX_RequestMsgLog.Add(log);
                 return wxdb.SaveChanges();
             }
@@ -49,9 +52,9 @@ namespace WeChatDataRepository
         /// </summary>
         /// <param name="data">回复实体</param>
         /// <param name="requestid">回复的请求id</param>
-        /// <param name="json">回复json串</param>
+        /// <param name="responsexml">回复json串</param>
         /// <returns></returns>
-        public int AddResponseMsgLog(BaseData data, int requestid, string json)
+        public int AddResponseMsgLog(BaseResponseData data, int requestid, string responsexml)
         {
             using (var wxdb = new WXDBEntity())
             {
@@ -60,9 +63,9 @@ namespace WeChatDataRepository
                 log.FromUserName = data.FromUserName;
                 log.CreateTime = data.CreateTime;
                 log.MsgType = data.MsgType;
-                log.MsgId = data.MsgId;
                 log.RequestId = requestid;
-                log.RequestJson = json;
+                log.ResponseXML = responsexml;
+                log.CreateDate = DateTime.Now;
                 wxdb.WX_ResponseMsgLog.Add(log);
                 return wxdb.SaveChanges();
             }

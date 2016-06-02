@@ -6,7 +6,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Content" Type="text" />
-    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <!--生成过程中发现错误:
 警告 6002: 表/视图“qds11839994_db.dbo.WX_Access_token”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
@@ -29,7 +29,7 @@
     <Property Name="MsgType" Type="varchar" MaxLength="100" />
     <Property Name="MsgId" Type="varchar" MaxLength="100" />
     <Property Name="RequestJson" Type="varchar(max)" />
-    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="WX_RequestParserFail">
     <Key>
@@ -38,7 +38,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RequestXML" Type="varchar(max)" />
     <Property Name="RequestJson" Type="varchar(max)" />
-    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="WX_ResponseMsgLog">
     <Key>
@@ -50,9 +50,8 @@
     <Property Name="FromUserName" Type="varchar" MaxLength="100" />
     <Property Name="CreateTime" Type="varchar" MaxLength="100" />
     <Property Name="MsgType" Type="varchar" MaxLength="100" />
-    <Property Name="MsgId" Type="varchar" MaxLength="100" />
-    <Property Name="RequestJson" Type="varchar(max)" />
-    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ResponseXML" Type="varchar(max)" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityContainer Name="WXEntityStoreContainer">
     <EntitySet Name="Global_Error" EntityType="Self.Global_Error" Schema="dbo" store:Type="Tables" />

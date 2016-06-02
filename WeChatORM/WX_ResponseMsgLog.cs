@@ -20,8 +20,7 @@ namespace WeChatORM
         public string FromUserName { get; set; }
         public string CreateTime { get; set; }
         public string MsgType { get; set; }
-        public string MsgId { get; set; }
-        public string RequestJson { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
+        public string ResponseXML { get; set; }
+        public System.DateTime CreateDate { get; set; }
     }
 }

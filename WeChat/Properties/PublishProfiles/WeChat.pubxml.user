@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Common.dll">
-      <publishTime>06/01/2016 17:52:12</publishTime>
+      <publishTime>06/02/2016 18:09:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/30/2016 17:08:08</publishTime>
@@ -59,22 +59,22 @@
       <publishTime>05/30/2016 16:19:54</publishTime>
     </File>
     <File Include="bin/WeChat.dll">
-      <publishTime>06/01/2016 17:56:21</publishTime>
+      <publishTime>06/02/2016 18:09:42</publishTime>
     </File>
     <File Include="bin/WeChatBusiness.dll">
-      <publishTime>06/01/2016 17:56:20</publishTime>
+      <publishTime>06/02/2016 18:09:42</publishTime>
     </File>
     <File Include="bin/WeChatDataRepository.dll">
-      <publishTime>06/01/2016 17:56:20</publishTime>
+      <publishTime>06/02/2016 18:09:41</publishTime>
     </File>
     <File Include="bin/WeChatORM.dll">
-      <publishTime>06/01/2016 17:52:12</publishTime>
+      <publishTime>06/02/2016 18:09:41</publishTime>
     </File>
     <File Include="bin/WeChatQuery.dll">
-      <publishTime>06/01/2016 17:52:13</publishTime>
+      <publishTime>06/02/2016 18:09:41</publishTime>
     </File>
     <File Include="bin/WXModel.dll">
-      <publishTime>06/01/2016 17:52:12</publishTime>
+      <publishTime>06/02/2016 18:09:40</publishTime>
     </File>
     <File Include="bin/zh-Hans/EntityFramework.resources.dll">
       <publishTime>05/30/2016 17:08:10</publishTime>

@@ -17,6 +17,6 @@ namespace WeChatORM
         public int Id { get; set; }
         public string RequestXML { get; set; }
         public string RequestJson { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
+        public System.DateTime CreateDate { get; set; }
     }
 }

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="GlobalBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WXForResponse.cs" />
     <Compile Include="WXQueryFactory.cs" />
     <Compile Include="WX_Access_tokenBusiness.cs" />
     <Compile Include="WX_RequestBusiness.cs" />

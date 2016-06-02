@@ -6,11 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ac87a8468ff74c2a9e19ad8ae2155341" Name="Diagram1" ZoomLevel="115">
         <EntityTypeShape EntityType="WXEntity.WX_Access_token" Width="1.5" PointX="5.125" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WXEntity.WX_RequestMsgLog" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="WXEntity.WX_RequestParserFail" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="WXEntity.WX_ResponseMsgLog" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="WXEntity.Global_Error" Width="1.5" PointX="5.375" PointY="3.75" />
-      </Diagram>
+        <EntityTypeShape EntityType="WXEntity.Global_Error" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WXEntity.WX_RequestParserFail" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="WXEntity.WX_RequestMsgLog" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="WXEntity.WX_ResponseMsgLog" Width="1.5" PointX="7.375" PointY="0.75" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
