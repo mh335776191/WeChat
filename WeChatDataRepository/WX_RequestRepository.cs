@@ -31,7 +31,7 @@ namespace WeChatDataRepository
         /// <param name="data">信息实体</param>
         /// <param name="json">信息json串</param>
         /// <returns></returns>
-        public int AddRequestMsgLog(BaseRequestData data, string json)
+        public int AddRequestMsgLog(BaseRequestData data, string json, string requestxml)
         {
             using (var wxdb = new WXDBEntity())
             {
@@ -42,9 +42,11 @@ namespace WeChatDataRepository
                 log.MsgType = data.MsgType;
                 log.MsgId = data.MsgId;
                 log.RequestJson = json;
+                log.RequestXML = requestxml;
                 log.CreateDate = DateTime.Now;
                 wxdb.WX_RequestMsgLog.Add(log);
-                return wxdb.SaveChanges();
+                wxdb.SaveChanges();
+                return log.Id;
             }
         }
         /// <summary>
@@ -67,7 +69,8 @@ namespace WeChatDataRepository
                 log.ResponseXML = responsexml;
                 log.CreateDate = DateTime.Now;
                 wxdb.WX_ResponseMsgLog.Add(log);
-                return wxdb.SaveChanges();
+                wxdb.SaveChanges();
+                return log.Id;
             }
         }
     }

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="GlobalRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseDataRepository.cs" />
     <Compile Include="WX_Access_tokenRepository.cs" />
     <Compile Include="WX_RequestRepository.cs" />
   </ItemGroup>

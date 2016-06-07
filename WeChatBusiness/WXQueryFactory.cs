@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using WXModel.WXTransmitData;
 using WXModel.WXTransmitData.RequestData;
+using WXModel.WXTransmitData.RequestData.Event;
 
 namespace WeChatBusiness
 {
@@ -22,10 +23,17 @@ namespace WeChatBusiness
             {
                 case MsgType.text:
                     return json.ToModel<TextRequestMsg>();
+                case MsgType.Event:
+                    var requestevenmodel = json.ToModel<EventBaseRequestMsg>();
+                    if (requestevenmodel.Event == "subscribe")//订阅事件
+                    {
+                        return json.ToModel<SubscribeEventRequestMsg>();
+                    }
+                    return requestevenmodel;
             }
             return null;
         }
-     
+
         public static MsgType GetMsgType(string json)
         {
             var baserequest = json.ToModel<BaseRequestData>();
@@ -45,6 +53,8 @@ namespace WeChatBusiness
                         return MsgType.shortvideo;
                     case "link":
                         return MsgType.link;
+                    case "event":
+                        return MsgType.Event;
                 }
             }
             return MsgType.text;

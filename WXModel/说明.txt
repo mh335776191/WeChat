@@ -1,2 +1,5 @@
 ﻿WXTransmitData 接受信息，回复信息实体。
 WXResultModel 微信api接口返回信息实体。
+
+
+http://mp.weixin.qq.com/wiki/home/ 开发文档

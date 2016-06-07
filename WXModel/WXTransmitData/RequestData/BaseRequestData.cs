@@ -12,7 +12,22 @@ namespace WXModel.WXTransmitData.RequestData
     {
         public string ToUserName { get; set; }
         public string FromUserName { get; set; }
-        public string CreateTime { get; set; }
+        string _createtime = "";
+        public string CreateTime
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(_createtime))
+                {
+                    return _createtime;
+                }
+                else
+                {
+                    return (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds.ToString();
+                }
+            }
+            set { _createtime = value; }
+        }
         public string MsgType { get; set; }
         public string MsgId { get; set; }
 

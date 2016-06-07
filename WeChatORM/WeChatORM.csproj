@@ -50,6 +50,9 @@
     <Compile Include="Global_Error.cs">
       <DependentUpon>WXDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="JokeDetail.cs">
+      <DependentUpon>WXDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WXDB.Context.cs">
       <AutoGen>True</AutoGen>

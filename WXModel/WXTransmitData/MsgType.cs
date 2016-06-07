@@ -30,6 +30,14 @@ namespace WXModel.WXTransmitData
         /// <summary>
         /// 链接消息
         /// </summary>
-        link
+        link,
+        /// <summary>
+        /// 图文消息
+        /// </summary>
+        news,
+        /// <summary>
+        /// 事件消息
+        /// </summary>
+        Event,
     }
 }

@@ -19,13 +19,7 @@ namespace WeChat.Controllers
 
         public ActionResult Action()
         {
-            string xml = @"<xml>
-            <ToUserName><![CDATA[SuperRookier]]></ToUserName>
-            <FromUserName><![CDATA[evalibusiness]]></FromUserName>
-            <CreateTime>12345678</CreateTime>
-            <MsgType><![CDATA[text]]></MsgType>
-            <Content><![CDATA[你好，这是一条测试回复信息]]></Content>
-            </xml>";
+
 
             try
             {
@@ -35,19 +29,45 @@ namespace WeChat.Controllers
                 byte[] requestBytes = new byte[requestlength];
                 requestStream.Read(requestBytes, 0, (int)requestlength);
                 string requestStr = Encoding.UTF8.GetString(requestBytes);
-                //string requestStr = xml;
+                //                string requestStr = @"<xml><ToUserName><![CDATA[gh_4ce5c62397ff]]></ToUserName>
+                //                                    <FromUserName><![CDATA[oiI62v8GLf52lVLsQyQvrRKGUrRk]]></FromUserName>
+                //                                    <CreateTime>1464965475</CreateTime>
+                //                                    <MsgType><![CDATA[text]]></MsgType>
+                //                                    <Content><![CDATA[趣图]]></Content>
+                //                                    <MsgId>6291978805302987227</MsgId>
+                //                                </xml>";
+
+
+
                 #endregion
                 string requestJson = requestStr.ToXMLJson();
-                MsgType curmsgType = WXQueryFactory.GetMsgType(requestJson);
-                BaseRequestData requestData = WXQueryFactory.GetRequestModel(requestJson, curmsgType);
+                MsgType requestmsgType = WXQueryFactory.GetMsgType(requestJson);
+                BaseRequestData requestData = WXQueryFactory.GetRequestModel(requestJson, requestmsgType);
                 WX_RequestBusiness _requestBusiness = new WX_RequestBusiness();
                 if (requestData != null)
                 {
-                    int requestid = _requestBusiness.AddRequestMsgLog(requestData, requestJson);
-                    WXForResponse responsecmd = new WXForResponse(requestData, curmsgType);
+                    int requestid = _requestBusiness.AddRequestMsgLog(requestData, requestJson, requestStr);
+                    WXForResponse responsecmd = new WXForResponse(requestData, requestmsgType);
                     var responsemodel = responsecmd.GetResponseModel();
                     var resuponsexml = responsecmd.GetResponseXML(responsemodel);
+                    //var model = new WXModel.WXTransmitData.ResponseData.Image_TextResponseMsg();
+                    //model.Title = "图文消息title";
+                    //model.ToUserName = "FromUserName";
+                    //model.FromUserName = "ToUserName";
+                    //model.MsgType = "news";
+                    //model.Articles = new WXModel.WXTransmitData.ResponseData.Article[2];
+                    //model.Articles[0] = (new WXModel.WXTransmitData.ResponseData.Article { Description = "第一个描述", PicUrl = "图片1", Url = "跳转url1", Title = "第一个" });
+                    //model.Articles[1] = (new WXModel.WXTransmitData.ResponseData.Article { Description = "第2个描述", PicUrl = "图片2", Url = "跳转url2", Title = "第2个" });
+                    //resuponsexml = model.ToResponseXml<WXModel.WXTransmitData.ResponseData.Image_TextResponseMsg>();
                     _requestBusiness.AddResponseMsgLog(responsemodel, requestid, resuponsexml);
+
+                    //                    resuponsexml = string.Format(@"<xml>
+                    //            <Content><![CDATA[你好，这是一条测试回复信息]]></Content>
+                    //            <ToUserName><![CDATA[{0}]]></ToUserName>
+                    //            <FromUserName><![CDATA[{1}]]></FromUserName>
+                    //            <CreateTime><![CDATA[12345678]]></CreateTime>
+                    //            <MsgType><![CDATA[text]]></MsgType>           
+                    //            </xml>", requestData.FromUserName, requestData.ToUserName);
                     return Content(resuponsexml, "text/xml");
                 }
                 else

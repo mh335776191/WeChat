@@ -16,5 +16,6 @@ namespace WeChatORM
     {
         public string access_token { get; set; }
         public System.DateTime updatedate { get; set; }
+        public int id { get; set; }
     }
 }

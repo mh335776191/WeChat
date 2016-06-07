@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common;
 using WeChatDataRepository;
 using WXModel.WXTransmitData;
 using WXModel.WXTransmitData.RequestData;
@@ -28,9 +29,10 @@ namespace WeChatBusiness
         /// <param name="data">信息实体</param>
         /// <param name="json">信息json串</param>
         /// <returns></returns>
-        public int AddRequestMsgLog(BaseRequestData data, string json)
+        public int AddRequestMsgLog(BaseRequestData data, string json, string requestxml)
         {
-            return _repository.AddRequestMsgLog(data, json);
+            data.CreateTime = WXCommon.formtToDate(data.CreateTime);
+            return _repository.AddRequestMsgLog(data, json, requestxml);
         }
         /// <summary>
         /// 添加回复信息记录
@@ -41,8 +43,10 @@ namespace WeChatBusiness
         /// <returns></returns>
         public int AddResponseMsgLog(BaseResponseData data, int requestid, string responsexml)
         {
+            //data.CreateTime = WXCommon.formtToDate(data.CreateTime);
+            data.CreateTime = DateTime.Now.ToString();
             return _repository.AddResponseMsgLog(data, requestid, responsexml);
         }
-       
+
     }
 }

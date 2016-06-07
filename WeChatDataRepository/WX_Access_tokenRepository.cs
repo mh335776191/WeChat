@@ -37,7 +37,7 @@ namespace WeChatDataRepository
                 if (model == null)
                 {
                     model = new WX_Access_token();
-
+                    wxdb.WX_Access_token.Add(model);
                 }
                 model.access_token = accesstoken;
                 model.updatedate = DateTime.Now;

@@ -44,8 +44,11 @@
     <Compile Include="WXRequestModel.cs" />
     <Compile Include="WXResultModel\WXAccessTokenResult.cs" />
     <Compile Include="WXTransmitData\RequestData\BaseRequestData.cs" />
+    <Compile Include="WXTransmitData\RequestData\Event\EventBaseRequestMsg.cs" />
+    <Compile Include="WXTransmitData\RequestData\Event\SubscribeEventRequestMsg.cs" />
     <Compile Include="WXTransmitData\RequestData\TextRequestMsg.cs" />
     <Compile Include="WXTransmitData\ResponseData\BaseResponseData.cs" />
+    <Compile Include="WXTransmitData\ResponseData\Image_TextResponseMsg.cs" />
     <Compile Include="WXTransmitData\ResponseData\TextResponseMsg.cs" />
   </ItemGroup>
   <ItemGroup>
