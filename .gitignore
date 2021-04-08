@@ -1,7 +1,4 @@
-UploadFiles/
-Thumbs.db
-_OpenAPIReferences/
-_ExternalReferences/
+*.config
 /MSBuild
 obj/
 *.odf
