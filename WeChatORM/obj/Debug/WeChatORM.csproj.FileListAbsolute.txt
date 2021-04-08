@@ -7,3 +7,14 @@ D:\gitui\learngit\WeChat\WeChatORM\bin\Debug\zh-Hans\EntityFramework.resources.d
 D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
 D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb
 D:\gitui\learngit\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojResolveAssemblyReference.cache
+D:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll.config
+D:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll
+D:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.pdb
+D:\Project\WeChat\WeChatORM\bin\Debug\EntityFramework.dll
+D:\Project\WeChat\WeChatORM\bin\Debug\EntityFramework.xml
+D:\Project\WeChat\WeChatORM\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojAssemblyReference.cache
+D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CoreCompileInputs.cache
+D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CopyComplete
+D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
+D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb

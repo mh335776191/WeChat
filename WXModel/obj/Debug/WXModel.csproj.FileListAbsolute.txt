@@ -7,3 +7,9 @@ D:\gitui\learngit\WeChat\WXModel\bin\Debug\WXModel.pdb
 D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.dll
 D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.pdb
 D:\gitui\learngit\WeChat\WXModel\obj\Debug\WXModel.csprojResolveAssemblyReference.cache
+D:\Project\WeChat\WXModel\bin\Debug\WXModel.dll
+D:\Project\WeChat\WXModel\bin\Debug\WXModel.pdb
+D:\Project\WeChat\WXModel\obj\Debug\WXModel.csprojAssemblyReference.cache
+D:\Project\WeChat\WXModel\obj\Debug\WXModel.csproj.CoreCompileInputs.cache
+D:\Project\WeChat\WXModel\obj\Debug\WXModel.dll
+D:\Project\WeChat\WXModel\obj\Debug\WXModel.pdb
