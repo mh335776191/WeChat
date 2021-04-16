@@ -17,8 +17,49 @@ namespace Common
             //直接确认，否则打不开    
             return true;
         }
-
-        public static string Post(string xml, string url, bool isUseCert, X509Certificate2 cert2, int timeout)
+        /// <summary>
+        /// 发送post请求
+        /// </summary>
+        /// <param name="Url"></param>
+        /// <param name="postDataStr"></param>
+        /// <returns></returns>
+        public static string HttpPost(string Url, string postDataStr)
+        {
+            string postData = postDataStr;
+            byte[] dataArray = Encoding.UTF8.GetBytes(postData);
+            //创建请求
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(Url);
+            request.Method = "POST";
+            request.ContentLength = dataArray.Length; 
+            //创建输入流
+            Stream dataStream = null;
+            try
+            {
+                dataStream = request.GetRequestStream();
+            }
+            catch (Exception)
+            {
+                return null;//连接服务器失败
+            }
+            //发送请求
+            dataStream.Write(dataArray, 0, dataArray.Length);
+            dataStream.Close();
+            //读取返回消息
+            string res = string.Empty;
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
+                res = reader.ReadToEnd();
+                reader.Close();
+            }
+            catch
+            {
+                return null;//连接服务器失败
+            }
+            return res;
+        }
+        public static string Post(string dataStr, string url, bool isUseCert, X509Certificate2 cert2, int timeout)
         {
             //System.GC.Collect();//垃圾回收，回收没有正常关闭的http连接
 
@@ -54,7 +95,7 @@ namespace Common
 
                 //设置POST的数据类型和长度
                 request.ContentType = "text/xml";
-                byte[] data = System.Text.Encoding.UTF8.GetBytes(xml);
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(dataStr);
                 request.ContentLength = data.Length;
 
                 //是否使用证书

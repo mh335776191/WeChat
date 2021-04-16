@@ -143,7 +143,6 @@ D:\Project\WeChat\WeChat\bin\WeChatDataRepository.pdb
 D:\Project\WeChat\WeChat\bin\WeChatORM.pdb
 D:\Project\WeChat\WeChat\bin\WeChatORM.dll.config
 D:\Project\WeChat\WeChat\bin\WeChatQuery.pdb
-D:\Project\WeChat\WeChat\bin\System.Net.Http.xml
 D:\Project\WeChat\WeChat\bin\EntityFramework.xml
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.Helpers.resources.dll
@@ -154,10 +153,10 @@ D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.Razor.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\Project\WeChat\WeChat\bin\zh-Hans\System.Net.Http.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\EntityFramework.resources.dll
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.csprojAssemblyReference.cache
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CopyComplete
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.dll
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.pdb
+D:\Project\WeChat\WeChat\bin\System.Net.Http.WebRequest.dll
