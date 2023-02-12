@@ -104,6 +104,7 @@
       <DependentUpon>WXDB.edmx</DependentUpon>
       <LastGenOutput>WXDB.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="WXDB.edmx.sql" />
     <Content Include="WXDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WXDB.edmx</DependentUpon>

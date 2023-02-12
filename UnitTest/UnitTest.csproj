@@ -53,9 +53,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BaiDuResourceUpLoad\BaiDuResourceUpLoad.csproj">
       <Project>{c56b4a87-19eb-472e-8594-b0cbb4d8f21e}</Project>
       <Name>BaiDuResourceUpLoad</Name>

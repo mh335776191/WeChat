@@ -4,83 +4,83 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="WXEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityType Name="Global_Error">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Content" Type="text" />
-          <Property Name="CreateDate" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="JokeDetail">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FormId" Type="int" Nullable="false" />
-          <Property Name="Author" Type="nvarchar" MaxLength="30" />
-          <Property Name="PublishDate" Type="datetime" Nullable="false" />
-          <Property Name="Content" Type="nvarchar(max)" />
-          <Property Name="ImgUrl" Type="varchar" MaxLength="500" />
-          <Property Name="Tag" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="GoodNum" Type="int" Nullable="false" />
-          <Property Name="ReplyNum" Type="int" Nullable="false" />
-          <Property Name="CreateDate" Type="datetime" />
-        </EntityType>
-        <EntityType Name="WX_Access_token">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="access_token" Type="varchar" MaxLength="1000" Nullable="false" />
-          <Property Name="updatedate" Type="datetime" Nullable="false" />
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-        </EntityType>
-        <EntityType Name="WX_RequestMsgLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ToUserName" Type="varchar" MaxLength="100" />
-          <Property Name="FromUserName" Type="varchar" MaxLength="100" />
-          <Property Name="CreateTime" Type="varchar" MaxLength="100" />
-          <Property Name="MsgType" Type="varchar" MaxLength="100" />
-          <Property Name="MsgId" Type="varchar" MaxLength="100" />
-          <Property Name="RequestJson" Type="varchar(max)" />
-          <Property Name="RequestXML" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="WX_RequestParserFail">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RequestXML" Type="varchar(max)" />
-          <Property Name="RequestJson" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="WX_ResponseMsgLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RequestId" Type="int" Nullable="false" />
-          <Property Name="ToUserName" Type="varchar" MaxLength="100" />
-          <Property Name="FromUserName" Type="varchar" MaxLength="100" />
-          <Property Name="CreateTime" Type="varchar" MaxLength="100" />
-          <Property Name="MsgType" Type="varchar" MaxLength="100" />
-          <Property Name="ResponseXML" Type="varchar(max)" />
-          <Property Name="CreateDate" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityContainer Name="WXEntityStoreContainer">
-          <EntitySet Name="Global_Error" EntityType="Self.Global_Error" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="JokeDetail" EntityType="Self.JokeDetail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WX_Access_token" EntityType="Self.WX_Access_token" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WX_RequestMsgLog" EntityType="Self.WX_RequestMsgLog" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WX_RequestParserFail" EntityType="Self.WX_RequestParserFail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WX_ResponseMsgLog" EntityType="Self.WX_ResponseMsgLog" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="WXEntity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WXEntityStoreContainer">
+    <EntitySet Name="Global_Error" EntityType="WXEntity.Store.Global_Error" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_RequestParserFail" EntityType="WXEntity.Store.WX_RequestParserFail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_ResponseMsgLog" EntityType="WXEntity.Store.WX_ResponseMsgLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.Store.WX_RequestMsgLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JokeDetail" EntityType="WXEntity.Store.JokeDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_Access_token" EntityType="WXEntity.Store.WX_Access_token" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Global_Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="varchar(max)" Nullable="true" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WX_RequestParserFail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestXML" Type="varchar(max)" Nullable="true" />
+    <Property Name="RequestJson" Type="varchar(max)" Nullable="true" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WX_ResponseMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+    <Property Name="ToUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ResponseXML" Type="varchar(max)" Nullable="true" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WX_RequestMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgId" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="RequestJson" Type="varchar(max)" Nullable="true" />
+    <Property Name="RequestXML" Type="varchar(max)" Nullable="true" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JokeDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="int" Nullable="false" />
+    <Property Name="Author" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="PublishDate" Type="datetime" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ImgUrl" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="Tag" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="GoodNum" Type="int" Nullable="false" />
+    <Property Name="ReplyNum" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="WX_Access_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="access_token" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="updatedate" Type="datetime" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WXEntity" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -163,84 +163,83 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WXEntityStoreContainer" CdmEntityContainer="WXDBEntity">
-          <EntitySetMapping Name="Global_Error">
-            <EntityTypeMapping TypeName="WXEntity.Global_Error">
-              <MappingFragment StoreEntitySet="Global_Error">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WX_RequestParserFail">
-            <EntityTypeMapping TypeName="WXEntity.WX_RequestParserFail">
-              <MappingFragment StoreEntitySet="WX_RequestParserFail">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-                <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WX_ResponseMsgLog">
-            <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
-              <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="RequestId" ColumnName="RequestId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WX_RequestMsgLog">
-            <EntityTypeMapping TypeName="WXEntity.WX_RequestMsgLog">
-              <MappingFragment StoreEntitySet="WX_RequestMsgLog">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
-                <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="JokeDetail">
-            <EntityTypeMapping TypeName="WXEntity.JokeDetail">
-              <MappingFragment StoreEntitySet="JokeDetail">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="ReplyNum" ColumnName="ReplyNum" />
-                <ScalarProperty Name="GoodNum" ColumnName="GoodNum" />
-                <ScalarProperty Name="Tag" ColumnName="Tag" />
-                <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
-                <ScalarProperty Name="Author" ColumnName="Author" />
-                <ScalarProperty Name="FormId" ColumnName="FormId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WX_Access_token">
-            <EntityTypeMapping TypeName="WXEntity.WX_Access_token">
-              <MappingFragment StoreEntitySet="WX_Access_token">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
-                <ScalarProperty Name="access_token" ColumnName="access_token" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WXEntityStoreContainer" CdmEntityContainer="WXDBEntity">
+    <EntitySetMapping Name="Global_Error">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.Global_Error)">
+        <MappingFragment StoreEntitySet="Global_Error">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_RequestParserFail">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_RequestParserFail)">
+        <MappingFragment StoreEntitySet="WX_RequestParserFail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_ResponseMsgLog">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_ResponseMsgLog)">
+        <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_RequestMsgLog">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_RequestMsgLog)">
+        <MappingFragment StoreEntitySet="WX_RequestMsgLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JokeDetail">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.JokeDetail)">
+        <MappingFragment StoreEntitySet="JokeDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="GoodNum" ColumnName="GoodNum" />
+          <ScalarProperty Name="ReplyNum" ColumnName="ReplyNum" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WX_Access_token">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_Access_token)">
+        <MappingFragment StoreEntitySet="WX_Access_token">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="access_token" ColumnName="access_token" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
@@ -254,7 +253,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>
     </Options>

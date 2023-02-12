@@ -2,75 +2,75 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="WXEntityStoreContainer" CdmEntityContainer="WXDBEntity">
     <EntitySetMapping Name="Global_Error">
-      <EntityTypeMapping TypeName="WXEntity.Global_Error">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.Global_Error)">
         <MappingFragment StoreEntitySet="Global_Error">
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WX_RequestParserFail">
-      <EntityTypeMapping TypeName="WXEntity.WX_RequestParserFail">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_RequestParserFail)">
         <MappingFragment StoreEntitySet="WX_RequestParserFail">
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WX_ResponseMsgLog">
-      <EntityTypeMapping TypeName="WXEntity.WX_ResponseMsgLog">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_ResponseMsgLog)">
         <MappingFragment StoreEntitySet="WX_ResponseMsgLog">
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
-          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="ResponseXML" ColumnName="ResponseXML" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WX_RequestMsgLog">
-      <EntityTypeMapping TypeName="WXEntity.WX_RequestMsgLog">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_RequestMsgLog)">
         <MappingFragment StoreEntitySet="WX_RequestMsgLog">
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
-          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
-          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="RequestJson" ColumnName="RequestJson" />
+          <ScalarProperty Name="RequestXML" ColumnName="RequestXML" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="JokeDetail">
-      <EntityTypeMapping TypeName="WXEntity.JokeDetail">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.JokeDetail)">
         <MappingFragment StoreEntitySet="JokeDetail">
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="ReplyNum" ColumnName="ReplyNum" />
-          <ScalarProperty Name="GoodNum" ColumnName="GoodNum" />
-          <ScalarProperty Name="Tag" ColumnName="Tag" />
-          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
-          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
-          <ScalarProperty Name="Author" ColumnName="Author" />
-          <ScalarProperty Name="FormId" ColumnName="FormId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="GoodNum" ColumnName="GoodNum" />
+          <ScalarProperty Name="ReplyNum" ColumnName="ReplyNum" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WX_Access_token">
-      <EntityTypeMapping TypeName="WXEntity.WX_Access_token">
+      <EntityTypeMapping TypeName="IsTypeOf(WXEntity.WX_Access_token)">
         <MappingFragment StoreEntitySet="WX_Access_token">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
           <ScalarProperty Name="access_token" ColumnName="access_token" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

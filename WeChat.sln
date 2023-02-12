@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30711.63
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXModel", "WXModel\WXModel.csproj", "{96B2C8DC-0469-40F5-AC04-71857AA7AB86}"
 EndProject
@@ -24,8 +24,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaiDu", "BaiDu", "{7902ECF7-CD66-43FE-99C2-79E2C34B2876}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiDuResourceUpLoad", "BaiDuResourceUpLoad\BaiDuResourceUpLoad.csproj", "{C56B4A87-19EB-472E-8594-B0CBB4D8F21E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{4F17721E-7A8B-4F7F-833B-83F501C58FD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +63,6 @@ Global
 		{C56B4A87-19EB-472E-8594-B0CBB4D8F21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C56B4A87-19EB-472E-8594-B0CBB4D8F21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C56B4A87-19EB-472E-8594-B0CBB4D8F21E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F17721E-7A8B-4F7F-833B-83F501C58FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F17721E-7A8B-4F7F-833B-83F501C58FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F17721E-7A8B-4F7F-833B-83F501C58FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F17721E-7A8B-4F7F-833B-83F501C58FD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,7 +73,6 @@ Global
 		{DA2D7621-8D14-40BC-AD99-581EA6B2E62A} = {1E7B4B17-215F-4B2E-9133-133026E3FBC3}
 		{7902ECF7-CD66-43FE-99C2-79E2C34B2876} = {938CC520-F50B-4172-A1D2-E2DAAD0C30F1}
 		{C56B4A87-19EB-472E-8594-B0CBB4D8F21E} = {7902ECF7-CD66-43FE-99C2-79E2C34B2876}
-		{4F17721E-7A8B-4F7F-833B-83F501C58FD0} = {7902ECF7-CD66-43FE-99C2-79E2C34B2876}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35E2D06B-287C-4EB3-B6C0-62B7E6B13791}

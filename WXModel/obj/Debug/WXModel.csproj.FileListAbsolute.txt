@@ -13,3 +13,9 @@ D:\Project\WeChat\WXModel\obj\Debug\WXModel.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WXModel\obj\Debug\WXModel.dll
 D:\Project\WeChat\WXModel\obj\Debug\WXModel.pdb
 D:\Project\WeChat\WXModel\obj\Debug\WXModel.csprojAssemblyReference.cache
+E:\Project\WeChat\WXModel\bin\Debug\WXModel.dll
+E:\Project\WeChat\WXModel\bin\Debug\WXModel.pdb
+E:\Project\WeChat\WXModel\obj\Debug\WXModel.csproj.AssemblyReference.cache
+E:\Project\WeChat\WXModel\obj\Debug\WXModel.csproj.CoreCompileInputs.cache
+E:\Project\WeChat\WXModel\obj\Debug\WXModel.dll
+E:\Project\WeChat\WXModel\obj\Debug\WXModel.pdb

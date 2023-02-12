@@ -18,3 +18,14 @@ D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CopyComplete
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojAssemblyReference.cache
+E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll.config
+E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll
+E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.pdb
+E:\Project\WeChat\WeChatORM\bin\Debug\EntityFramework.dll
+E:\Project\WeChat\WeChatORM\bin\Debug\EntityFramework.xml
+E:\Project\WeChat\WeChatORM\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.AssemblyReference.cache
+E:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CoreCompileInputs.cache
+E:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CopyComplete
+E:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
+E:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb

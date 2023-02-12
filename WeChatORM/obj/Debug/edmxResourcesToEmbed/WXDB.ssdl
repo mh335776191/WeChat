@@ -1,48 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="WXEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+<Schema Namespace="WXEntity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WXEntityStoreContainer">
+    <EntitySet Name="Global_Error" EntityType="WXEntity.Store.Global_Error" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_RequestParserFail" EntityType="WXEntity.Store.WX_RequestParserFail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_ResponseMsgLog" EntityType="WXEntity.Store.WX_ResponseMsgLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.Store.WX_RequestMsgLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JokeDetail" EntityType="WXEntity.Store.JokeDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WX_Access_token" EntityType="WXEntity.Store.WX_Access_token" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
   <EntityType Name="Global_Error">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Content" Type="text" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="JokeDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FormId" Type="int" Nullable="false" />
-    <Property Name="Author" Type="nvarchar" MaxLength="30" />
-    <Property Name="PublishDate" Type="datetime" Nullable="false" />
-    <Property Name="Content" Type="nvarchar(max)" />
-    <Property Name="ImgUrl" Type="varchar" MaxLength="500" />
-    <Property Name="Tag" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="GoodNum" Type="int" Nullable="false" />
-    <Property Name="ReplyNum" Type="int" Nullable="false" />
-    <Property Name="CreateDate" Type="datetime" />
-  </EntityType>
-  <EntityType Name="WX_Access_token">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="access_token" Type="varchar" MaxLength="1000" Nullable="false" />
-    <Property Name="updatedate" Type="datetime" Nullable="false" />
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-  </EntityType>
-  <EntityType Name="WX_RequestMsgLog">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ToUserName" Type="varchar" MaxLength="100" />
-    <Property Name="FromUserName" Type="varchar" MaxLength="100" />
-    <Property Name="CreateTime" Type="varchar" MaxLength="100" />
-    <Property Name="MsgType" Type="varchar" MaxLength="100" />
-    <Property Name="MsgId" Type="varchar" MaxLength="100" />
-    <Property Name="RequestJson" Type="varchar(max)" />
-    <Property Name="RequestXML" Type="varchar(max)" />
+    <Property Name="Content" Type="varchar(max)" Nullable="true" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="WX_RequestParserFail">
@@ -50,8 +21,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RequestXML" Type="varchar(max)" />
-    <Property Name="RequestJson" Type="varchar(max)" />
+    <Property Name="RequestXML" Type="varchar(max)" Nullable="true" />
+    <Property Name="RequestJson" Type="varchar(max)" Nullable="true" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="WX_ResponseMsgLog">
@@ -60,19 +31,48 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RequestId" Type="int" Nullable="false" />
-    <Property Name="ToUserName" Type="varchar" MaxLength="100" />
-    <Property Name="FromUserName" Type="varchar" MaxLength="100" />
-    <Property Name="CreateTime" Type="varchar" MaxLength="100" />
-    <Property Name="MsgType" Type="varchar" MaxLength="100" />
-    <Property Name="ResponseXML" Type="varchar(max)" />
+    <Property Name="ToUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ResponseXML" Type="varchar(max)" Nullable="true" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="WXEntityStoreContainer">
-    <EntitySet Name="Global_Error" EntityType="Self.Global_Error" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="JokeDetail" EntityType="Self.JokeDetail" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="WX_Access_token" EntityType="Self.WX_Access_token" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="WX_RequestMsgLog" EntityType="Self.WX_RequestMsgLog" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="WX_RequestParserFail" EntityType="Self.WX_RequestParserFail" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="WX_ResponseMsgLog" EntityType="Self.WX_ResponseMsgLog" Schema="dbo" store:Type="Tables" />
-  </EntityContainer>
+  <EntityType Name="WX_RequestMsgLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromUserName" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CreateTime" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgType" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MsgId" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="RequestJson" Type="varchar(max)" Nullable="true" />
+    <Property Name="RequestXML" Type="varchar(max)" Nullable="true" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JokeDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="int" Nullable="false" />
+    <Property Name="Author" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="PublishDate" Type="datetime" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ImgUrl" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="Tag" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="GoodNum" Type="int" Nullable="false" />
+    <Property Name="ReplyNum" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="WX_Access_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="access_token" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="updatedate" Type="datetime" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
 </Schema>

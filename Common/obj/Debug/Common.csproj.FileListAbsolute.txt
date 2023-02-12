@@ -18,3 +18,12 @@ D:\Project\WeChat\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\Common\obj\Debug\Common.csproj.CopyComplete
 D:\Project\WeChat\Common\obj\Debug\Common.dll
 D:\Project\WeChat\Common\obj\Debug\Common.pdb
+E:\Project\WeChat\Common\bin\Debug\Common.dll
+E:\Project\WeChat\Common\bin\Debug\Common.pdb
+E:\Project\WeChat\Common\bin\Debug\WXModel.dll
+E:\Project\WeChat\Common\bin\Debug\WXModel.pdb
+E:\Project\WeChat\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\Project\WeChat\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Project\WeChat\Common\obj\Debug\Common.csproj.CopyComplete
+E:\Project\WeChat\Common\obj\Debug\Common.dll
+E:\Project\WeChat\Common\obj\Debug\Common.pdb
