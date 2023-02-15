@@ -16,7 +16,10 @@ namespace WeChat.Controllers
 {
     public class WeiXinController : Controller
     {
-
+        public ActionResult _Health()
+        {
+            return Content("ok");
+        }
         public ActionResult Action()
         {
 

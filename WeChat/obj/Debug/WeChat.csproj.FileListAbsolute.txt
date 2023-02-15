@@ -154,7 +154,6 @@ D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\Project\WeChat\WeChat\bin\zh-Hans\EntityFramework.resources.dll
-D:\Project\WeChat\WeChat\obj\Debug\WeChat.csprojAssemblyReference.cache
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CopyComplete
 D:\Project\WeChat\WeChat\obj\Debug\WeChat.dll
@@ -217,3 +216,4 @@ E:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CoreCompileInputs.cache
 E:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.CopyComplete
 E:\Project\WeChat\WeChat\obj\Debug\WeChat.dll
 E:\Project\WeChat\WeChat\obj\Debug\WeChat.pdb
+D:\Project\WeChat\WeChat\obj\Debug\WeChat.csproj.AssemblyReference.cache

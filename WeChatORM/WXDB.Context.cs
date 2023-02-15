@@ -31,5 +31,8 @@ namespace WeChatORM
         public DbSet<WX_RequestMsgLog> WX_RequestMsgLog { get; set; }
         public DbSet<JokeDetail> JokeDetail { get; set; }
         public DbSet<WX_Access_token> WX_Access_token { get; set; }
+        public DbSet<BaiDuAccessToken> BaiDuAccessToken { get; set; }
+        public DbSet<Company> Company { get; set; }
+        public DbSet<WeChatSetting> WeChatSetting { get; set; }
     }
 }

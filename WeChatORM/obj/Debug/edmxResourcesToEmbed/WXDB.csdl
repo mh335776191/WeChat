@@ -7,6 +7,9 @@
     <EntitySet Name="WX_RequestMsgLog" EntityType="WXEntity.WX_RequestMsgLog" />
     <EntitySet Name="JokeDetail" EntityType="WXEntity.JokeDetail" />
     <EntitySet Name="WX_Access_token" EntityType="WXEntity.WX_Access_token" />
+    <EntitySet Name="BaiDuAccessToken" EntityType="WXEntity.BaiDuAccessToken" />
+    <EntitySet Name="Company" EntityType="WXEntity.Company" />
+    <EntitySet Name="WeChatSetting" EntityType="WXEntity.WeChatSetting" />
   </EntityContainer>
   <EntityType Name="Global_Error">
     <Key>
@@ -74,5 +77,37 @@
     <Property Name="access_token" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
     <Property Name="updatedate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="BaiDuAccessToken">
+    <Key>
+      <PropertyRef Name="AccessToken" />
+    </Key>
+    <Property Name="AccessToken" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsUsed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Creater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WeChatSetting">
+    <Key>
+      <PropertyRef Name="WeChatSettingId" />
+    </Key>
+    <Property Name="WeChatSettingId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Token" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AppId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AppSecret" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int64" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

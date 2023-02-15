@@ -32,7 +32,6 @@ D:\Project\WeChat\WeChatBusiness\bin\Debug\WeChatQuery.pdb
 D:\Project\WeChat\WeChatBusiness\bin\Debug\WXModel.pdb
 D:\Project\WeChat\WeChatBusiness\bin\Debug\EntityFramework.xml
 D:\Project\WeChat\WeChatBusiness\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csprojAssemblyReference.cache
 D:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csproj.CopyComplete
 D:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.dll
@@ -58,3 +57,4 @@ E:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csproj.CoreCompileInpu
 E:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csproj.CopyComplete
 E:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.dll
 E:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.pdb
+D:\Project\WeChat\WeChatBusiness\obj\Debug\WeChatBusiness.csproj.AssemblyReference.cache

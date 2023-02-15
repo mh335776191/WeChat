@@ -17,7 +17,6 @@ D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csproj.CopyComplete
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.dll
 D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.pdb
-D:\Project\WeChat\WeChatORM\obj\Debug\WeChatORM.csprojAssemblyReference.cache
 E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll.config
 E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.dll
 E:\Project\WeChat\WeChatORM\bin\Debug\WeChatORM.pdb

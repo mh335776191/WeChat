@@ -11,6 +11,9 @@
         <EntityTypeShape EntityType="WXEntity.WX_RequestMsgLog" Width="1.5" PointX="3.375" PointY="3.75" />
         <EntityTypeShape EntityType="WXEntity.JokeDetail" Width="1.5" PointX="5.375" PointY="4.75" />
         <EntityTypeShape EntityType="WXEntity.WX_Access_token" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="WXEntity.BaiDuAccessToken" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="WXEntity.Company" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="WXEntity.WeChatSetting" Width="1.5" PointX="7.75" PointY="4.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

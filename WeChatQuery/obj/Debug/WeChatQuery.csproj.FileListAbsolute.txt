@@ -13,7 +13,6 @@ D:\Project\WeChat\WeChatQuery\bin\Debug\Common.dll
 D:\Project\WeChat\WeChatQuery\bin\Debug\WXModel.dll
 D:\Project\WeChat\WeChatQuery\bin\Debug\Common.pdb
 D:\Project\WeChat\WeChatQuery\bin\Debug\WXModel.pdb
-D:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csprojAssemblyReference.cache
 D:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csproj.CopyComplete
 D:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.dll
@@ -29,3 +28,4 @@ E:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csproj.CoreCompileInputs.cac
 E:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csproj.CopyComplete
 E:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.dll
 E:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.pdb
+D:\Project\WeChat\WeChatQuery\obj\Debug\WeChatQuery.csproj.AssemblyReference.cache

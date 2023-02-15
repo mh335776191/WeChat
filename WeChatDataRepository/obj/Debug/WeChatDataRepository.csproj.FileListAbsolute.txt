@@ -20,7 +20,6 @@ D:\Project\WeChat\WeChatDataRepository\bin\Debug\WeChatORM.dll.config
 D:\Project\WeChat\WeChatDataRepository\bin\Debug\WXModel.pdb
 D:\Project\WeChat\WeChatDataRepository\bin\Debug\EntityFramework.xml
 D:\Project\WeChat\WeChatDataRepository\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csprojAssemblyReference.cache
 D:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csproj.CoreCompileInputs.cache
 D:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csproj.CopyComplete
 D:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.dll
@@ -40,3 +39,4 @@ E:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csproj.Cor
 E:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csproj.CopyComplete
 E:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.dll
 E:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.pdb
+D:\Project\WeChat\WeChatDataRepository\obj\Debug\WeChatDataRepository.csproj.AssemblyReference.cache
